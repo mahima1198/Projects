@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>QNOTES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  {% load static %}
+  <link rel="icon" type="image/ico"  href="{% static 'Qnotes/favicon.png' %}" /> 
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+   {% load static %}
+  <link rel="stylesheet" href="{% static 'Qnotes/lib/bootstrap/css/bootstrap.min.css' %}">
+
+  <!-- Libraries CSS Files -->
+   {% load static %}
+  <link rel="stylesheet" href="{% static 'Qnotes/lib/font-awesome/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'Qnotes/lib/animate/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'Qnotes/lib/ionicons/css/ionicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'Qnotes/lib/owlcarousel/assets/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'Qnotes/lib/lightbox/css/lightbox.min.css' %}">
+
+  <!-- Main Stylesheet File -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'Qnotes/style.css' %}">
+<style type="text/css">
+  .main{
+    font-family: comic Sans ms;
+  }
+</style>
+</head>
+<body>
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container-fluid">
+      <div id="logo" class="pull-left">
+        {% load static %}
+       <h1><img src="{% static 'Qnotes/logo.png' %}" style="height:30%;width:30%;"></h1>
+      </div>
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators"></ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            {% load static %}
+            <div class="carousel-background"><img src="{% static 'Qnotes/1.jpg' %}" style="" alt="asdfghjkxcvbnmfghj"></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 style="font-family: comic Sans ms">Save your thoughts,wherever you are.</h2>
+                <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn-get-started scrollto" style="font-family: comic Sans ms"b>Try Quick Notes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- #intro -->
+
+  <main id="main">
+  <br>
+  <br>
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+      <div class="container">
+
+        <header class="section-header wow fadeInUp">
+          <h3>Services</h3>
+      
+    </header>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-android-add"></i></div>
+            <h4 class="title"><a href="">Add New Note</a></h4>
+            <p class="description">You can add a note,can edit that note as well as can delete that note which is of no use,also you have option of color change for particular note</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-star"></i></div>
+            <h4 class="title"><a href="">Add Notes To Favourite</a></h4>
+            <p class="description">You can add a note which is important for you to favourite</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-android-archive"></i></div>
+            <h4 class="title"><a href="">Add To archive</a></h4>
+            <p class="description">you can add note to which you don't wanna delete but you don't want in you favourites or in your all notes can be archived</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-list"></i></div>
+            <h4 class="title"><a href="">Add To Do</a></h4>
+            <p class="description">you can also make a check list of items, No need for text messages back and forth. Get things done together, faster.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-android-share"></i></div>
+            <h4 class="title"><a href="">Share Note</a></h4>
+            <p class="description">You can share your note to one or more people by just adding their mail account,as well as you can see information as last edited date and author name.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-search"></i></div>
+            <h4 class="title"><a href="">Search particulars</a></h4>
+            <p class="description">Quickly filter and search for notes by title.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>QNOTES</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="">Group12</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- JavaScript Libraries -->
+  {% load static %}
+  <script src="{% static 'Qnotes/lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/waypoints/waypoints.min.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/isotope/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/lightbox/js/lightbox.min.js' %}"></script>
+  <script src="{% static 'Qnotes/lib/touchSwipe/jquery.touchSwipe.min.js' %}"></script>
+  <script src="{% static 'Qnotes/main.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive Notes</title> 
+ {% load static %}
+ {% include 'base.html' %}
+ <link rel="icon" type="image/ico" href="{% static 'Qnotes/favicon.png' %}" />
+ <style type="text/css">
+   .bggrey{
+  background-image: url("{% static 'Qnotes/bg.png' %}");
+}
+
+ </style>
+</head>
+
+{%if user.email%}
+ {% load static %}
+
+<body class="bggrey">
+  
+   <center style="font-family: Comic Sans MS;color: black;"><h1>List of Archive Notes</h1></center>
+  
+  
+{% csrf_token %} 
+<div class="container" style="padding: 10px 10px 10px 50px;">
+  <div class="row" >
+      {% for i in arcdata %}
+
+      <div class="note col-md-2 scrollbar" id="style-2" style=" background-color: {{i.note_colour}};overflow: auto;overflow-x: hidden;height: 220px;width:250px;border-radius: 20px;border-color: {{i.note_colour}};" >
+        <p> 
+          <div class="dropdown">
+            <button type="submit" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background:{{i.note_colour}};">
+            <i class="fa fa-ellipsis-v"></i>
+            </button>
+          <div class="dropdown-menu" style="min-width: 60px; margin-left: 130px;background:{{i.note_colour}};">
+          <a href="{% url 'delete_note' i.id %}">
+          <button type="button" class="btn" onclick="deleteFunction()" data-toggle="tooltip" title="Delete" style="background:{{i.note_colour}};;">
+          <i class="material-icons" style="font-size:20px">delete</i>
+          </button>
+          </a> 
+          <a href="{% url 'undo_archive' i.id %}">
+            <button type="button" class="btn" onclick="undoFunction()" data-toggle="tooltip" title="Unarchive" style="background:{{i.note_colour}};;">
+              <i class="material-icons" style="font-size:20px">unarchive</i>
+            </button>
+          </a>
+        </div>
+      </div>
+        </p>
+<center><img src="{% static 'Qnotes/pushpin.png' %}" style="height: 40px;width: 40px;"></center>
+        <br>
+        <p>
+        <b> Title : </b> {{i.title}}
+        </p>
+          <p>
+            <b> Content : </b> {{i.content}}
+          </p>
+      </div>
+      
+      {%endfor%}
+
+    </div>
+    </div>
+  {% else %}<center>
+<h2 style="color: #1e90ff;font-family: Comic Sans MS;">You are not logged in yet. Please <a href="{% url 'index' %}" >Login Here</a> to access your Notes!!</h2>
+{% endif %}
+    
+<script src="{% static 'Qnotes/archive.js' %}">
+ 
+</script>
+<script type="text/javascript">
+  function deleteFunction(){
+    alert("Note Deleted Successfully");
+  }
+   function undoFunction(){
+    alert("Note has been removed from Archive!!");
+  }
+
+</script>
+</body>
+</html>

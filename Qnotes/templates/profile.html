@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+  You are logged in as {{ user }}.
+  <a href="/accounts/logout/">Click here to log out.</a>
+  <a href="/show_notes/">Notes</a>
+{% else %}
+  You are not logged in.
+  <a href="/accounts/login/">Click here to log in.</a>
+{% endif %}
+</body>
+</html>

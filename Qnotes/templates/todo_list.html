@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TODO List</title>
+{% load static %}
+<link rel="icon" type="image/ico" href="{% static 'Qnotes/logo_34s_icon.ico' %}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{% static 'Qnotes/todo_list_edit.css' %}" rel="stylesheet" type="text/css"> 
+<style type="text/css">
+	  body{
+  background-image: url("{% static 'Qnotes/bg.png' %}");
+}
+</style> 
+</head>
+<body>
+{% if user.email %}
+{% include "base.html" %}
+<center>
+<a href="{% url 'goto_todo' %}">
+<button class="submit btn2" style=" font-family: Comic Sans MS;">ADD NEW TO-DO LIST</button>
+</a>
+</center>
+<hr>
+
+<form action="/goto_todo/">
+{% csrf_token %}
+<div class="container">
+	<div class="row">
+		{%for i in data%}
+			<div class="col-md-4">
+				<table style="margin-bottom: 10px;background-color: #cbf0f8;border-color: #cbf0f8;width: 250px;height: auto;box-shadow: 6px 6px 6px #4f4f4f;font-family: Comic Sans MS;" id="todo_list" border="0">
+				{%for j in i%}
+				{%if forloop.first%}
+				<tr>
+					<td></td>
+					<td><a href="{% url 'add_todogoto' j.id %}" data-toggle="tooltip" style="font-family: Comic Sans MS;" title="ADD NEW ITEM" required><i class="material-icons" style="color: black; margin-left: 10%;">add</i></a>
+					</td>
+				</tr>
+				{%endif%}
+				<tr style=" border-bottom: 1px solid #c4c5c6;">
+					<td style="min-width: 250px; width: auto;">{{j.content}}</td>
+					<td align="center"><a href="{% url 'delete_todo' j.tid %}" data-toggle="tooltip" title="Check the Item"><i class="material-icons" style="font-size:20px;color:black;">delete_outline</i></a></td>
+				</tr>
+				{%endfor%}
+				</table>
+			</div>
+		{%endfor%}
+	</div>
+</div>
+
+</form>
+
+{% else %}
+<h2 style="color: #1e90ff;font-family: Comic Sans MS;">You are not logged in yet. Please <a href="{% url 'index' %}" >Login Here</a> to access your Notes!!</h2>
+{% endif %}
+</body>
+</html>

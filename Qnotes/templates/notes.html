@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes</title> 
+{% load static %}
+
+{% include 'base.html' %}
+<link rel="icon" type="image/ico" href="{% static 'Qnotes/favicon.png' %}" />
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style type="text/css">
+.bggrey{
+  background-image: url("{% static 'Qnotes/bg.png' %}");
+}
+  #style-2::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #4d4d4f;
+}
+
+</style>
+<script >
+  // Function to change heading background color
+  function changeNotesBg(color,nid){
+    document.getElementById("note").style.background = color;
+  }
+</script>
+</head>
+
+{% if user.email %}
+<body class="bggrey">
+  <!--Add New Note-->
+  <div class="w3-container">
+  <center><button onclick="document.getElementById('id01').style.display='block'" class="submit btn2 " data-toggle="tooltip" title="add new note" style=" font-family: Comic Sans MS;">
+    ADD NEW NOTE
+  </button></center>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom"style="width:40%;height:85%;border-radius: 30px;">
+      <header class="w3-container"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-xlarge w3-display-topright">&times;</span>
+        
+        <center><h1 style="margin-top:15px;color: #094978;font-family: Comic Sans MS;">Add Sticky Note</h1></center>
+      </header>
+      <div class="w3-container">
+        <form role="form" name="addNote" id="addSticky" action="/create_notes/" method="POST">
+                  <div class="control-group form-group">{% csrf_token %} 
+                    <div class="controls">
+                      <br /><br />
+                      <label for="title" style="color: #094978;font-family: Comic Sans MS;">Title</label>
+                      <input type="text" class="form-control" id="notename"  name="title" required>
+                    <div class="controls">
+                      <label for="content"  style="color: #094978;font-family: Comic Sans MS;height: 30%">Content</label>
+                      <textarea id="notecontent" class="form-control" maxlength="999" rows="5" cols="100" required style="resize: none;" name="content" required></textarea>
+                    </div>
+                  </div>
+                  <center>
+                    <br>
+                  <input type="submit" class="submit btn2" id="saveButton" style="margin-bottom:10px;" value="Add Note" onclick="addFunction()" onsubmit="this.reset()">
+                </center>
+              </div>
+                </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Show Notes-->
+  
+{% csrf_token %} 
+<div class="container">
+  <div class="row" >
+       {% for i in data %}
+       {%if i.fav_flag == 0%}
+       {%if i.arc_flag == 0%}
+
+      <div class="note col-md-2 scrollbar" id="style-2" style=" background-color: {{i.note_colour}};overflow: auto;overflow-x: hidden;height: 220px;width:250px;border-radius: 20px;border-color:{{i.note_colour}};" >
+       
+                     <div class="dropdown">
+                     <button type="submit" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="menu1" style="background-color:{{i.note_colour}};">
+                         <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu" role="menu" aria-labelledby="menu1" style="min-width: 80px; margin-left: 20px;background:{{i.note_colour}};">
+
+                          <a href="{% url 'fav_note' i.id %}">
+                          <button type="button" class="btn"  onclick="favouriteFunction()" data-toggle="tooltip" title="Favourites" style="background:{{i.note_colour}};">
+                            <i class="material-icons" style="font-size: 18px;">star_border</i>
+                          </button>
+                          </a>
+                      
+                  <a href="{% url 'edit_note' i.id %}">
+                  <button type="button" class="btn" data-toggle="tooltip" title="Edit" style="background:{{i.note_colour}};">
+                    <i class="material-icons" style="font-size: 18px;">edit</i>
+                  </button></a>
+
+                 
+
+                  <a href="{% url 'post_groupnote' i.id %}">
+                  <button type="button" class="btn" data-toggle="tooltip" title="Share" style="background:{{i.note_colour}};">
+                    <i class="material-icons" style="font-size: 18px;">share</i>
+                  </button></a>
+
+                  <a href="{% url 'archive_note' i.id %}">
+                  <button type="button" class="btn" onclick="archiveFunction()" data-toggle="tooltip" title="Archive" style="background:{{i.note_colour}};">
+                    <i class="material-icons" style="font-size: 18px;">archive</i>
+                  </button></a>
+
+                  <a href="{% url 'delete_note' i.id %}">
+                  <button type="button" class="btn" onclick="deleteFunction()" data-toggle="tooltip" title="Delete" style="background:{{i.note_colour}};">
+                    <i class="material-icons" style="font-size: 18px;">delete</i>
+                  </button></a>
+                       </div>
+                      </div>
+                      
+
+                      <div class="dropdown">
+                      <button type="submit" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background:{{i.note_colour}};">
+                       <i class="material-icons" style="font-size:21px">palette</i>
+                      </button>
+                      <div class="dropdown-menu" style="min-width:70px;margin-left:5px; background-color: {{i.note_colour}};">
+                        <a href="{% url 'colour_change1' i.id %}" ><button class="squares ffc"  ></button></a>
+                        
+                        <a href="{% url 'colour_change2' i.id %}" ><button class="squares cfc" ></button></a>
+                        
+                        
+                        <a href="{% url 'colour_change4' i.id %}" ><button class="squares d7aefb" ></button></a>
+
+                        <a href="{% url 'colour_change5' i.id %}" ><button class="squares ccebff"></button></a>
+
+                        <a href="{% url 'colour_change6' i.id %}" ><button class="squares f28b82"  ></button></a>
+
+                        <a href="{% url 'colour_change7' i.id %}" ><button class="squares cccccc"  ></button></a>
+
+                        <a href="{% url 'colour_change8' i.id %}" ><button class="squares fdcfe8"  ></button></a>
+                      </div>
+                    </div>
+                    <center><img src="{% static 'Qnotes/pushpin.png' %}" style="height: 40px;width: 40px;"></center>
+
+                    <br>
+
+                    <p style="padding-left:8px">
+                      <b>Title : </b> {{i.title}}
+                    </p>
+                    <p style="padding-left:8px">
+                      <b> Content : </b> {{i.content}}
+                    </p>
+</div>
+      {%endif%}
+                  {%endif%}
+                  {%endfor%}
+    </div>
+  </div>
+  
+<script src="{% static 'Qnotes/archive.js' %}">
+ 
+</script>
+<script type="text/javascript">
+  function deleteFunction(){
+    alert("Note Deleted Successfully");
+  }
+   function undoFunction(){
+    alert("Note has been removed from Archive!!");
+  }
+  $(document).ready(function(){
+    $(".form-control").on("input",function(){           
+      if ($(this).val() == "")
+        $(".form-control").css({color:""});            
+      else {
+        if (checkURL($(this).val()))
+          $(".form-control").css({color:"#0645AD"});
+        else
+          $(".form-control").css({color:"black"});
+        }
+  })
+              
+</script>
+</body>
+
+{% else %}<center>
+<h2 style="color: #1e90ff;font-family: Comic Sans MS;">You are not logged in yet. Please <a href="{% url 'index' %}" >Login Here</a> to access your Notes!!</h2>
+{% endif %}
+    
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+ <link rel="icon" type="image/ico" href="{% static 'Qnotes/logo2.jpg' %}" />
+	<title>Edit Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+{%if user.email%}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'Qnotes/notes.css' %}"> 
+</head>
+{% include "base.html" %}
+<body class="bggrey">
+
+<div class="col-sm-12" style="height: 100%;">
+	<h2 style="margin-top:15px;font-family: Comic Sans MS;"><center>Edit Shared note</center></h2>
+		<div class="col-sm-3"></div>
+        <div class="col-sm-6 border">
+          <form role="form" name="addNote" id="addSticky" action="/update_sharednote/" method="POST" center>
+            <div class="control-group form-group">{% csrf_token %} 
+              <div class="controls">
+                <br /><br />
+                <input type="hidden" name="sid"  class="form-control"value="{{data.sid}}" >
+
+              
+                <label for="title" style="font-family: Comic Sans MS;">Title</label>
+                <input type="text" class="form-control" id="notename" style="font-family: Comic Sans MS;" name="etitle" value="{{data.title}}"><br /><br />
+              <div class="controls">
+                <label for="content" style="font-family: Comic Sans MS;">Content</label>
+                <textarea id="notecontent" class="form-control" maxlength="999" rows="10" cols="100" required style="resize: none;font-family: Comic Sans MS;" name="econtent" >{{data.content}}</textarea>
+              </div>
+            </div></br>
+            <center>
+            <input type="submit" class="submit btn2" id="saveButton" style="margin-bottom:10px ; font-family: Comic Sans MS;" value="Edit" onclick="editFunction()">
+            </center>
+          </form>
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+   function editFunction(){
+  alert("Your note has been edited sucessfully!!");
+ }
+
+ </script>
+{% else %}<center>
+<h2 style="color: #1e90ff;font-family: Comic Sans MS;">You are not logged in yet. Please <a href="{% url 'index' %}" >Login Here</a> to access your Notes!</h2></center>
+{% endif %}
+</body>
+</html>

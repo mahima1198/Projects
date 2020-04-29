@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+ <link rel="icon" type="image/ico" href="{% static 'Qnotes/logo2.jpg' %}" />
+	<title>Share Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{%if user.email %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'Qnotes/notes.css' %}"> 
+</head>
+{% include "base.html" %}
+<body class="bggrey" style="overflow: auto;">
+
+<div class="col-sm-12">
+		<div class="col-sm-3"></div>
+        <div class="col-sm-6 border">
+          <form role="form" name="addNote" id="addSticky" action="/share_note/" method="POST" center>
+            <div class="control-group form-group">{% csrf_token %} 
+              <div class="controls">
+                <br />
+                <input type="hidden" name="id"  class="form-control"value="{{data.id}}" >
+
+
+                <label for="sender" style="font-family: Comic Sans MS;">Sender</label>
+                <input type="text" class="form-control"  style="font-family: Comic Sans MS;" name="sender" value="{{user.email}}" readonly>
+                &nbsp;
+              <div class="controls">
+
+
+              	<!--<label for="password" style="font-family: Comic Sans MS;">Password</label>
+                <input type="password" class="form-control" style="font-family: Comic Sans MS;" name="password" required><br /></div>-->
+              <div class="controls">
+              
+                <label for="recipient" style="font-family: Comic Sans MS;">Recipient</label>
+                <input type="text" class="form-control"  style="font-family: Comic Sans MS;" name="recipient" required><br />
+              
+
+              <label for="subject" style="font-family: Comic Sans MS;">Subject</label>
+                <input type="text" class="form-control"  style="font-family: Comic Sans MS;" name="subject" required><br />
+              <div class="controls">
+
+                <label for="content" style="font-family: Comic Sans MS;">Content</label>
+                <textarea id="notecontent" class="form-control" maxlength="999" rows="5" cols="100" required style="resize: none;font-family: Comic Sans MS;" name="msg" readonly>Title : {{data.title}}
+Content : {{data.content}}</textarea>
+              </div>
+            </div></br>
+            <center>
+            <input type="submit" class="submit btn2" id="saveButton" style="margin-bottom:10px ; font-family: Comic Sans MS;" value="Share">
+            </center>
+          </form>
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+  </div>
+
+  
+{% else %}<center>
+<h2 style="color: #1e90ff;font-family: Comic Sans MS;">You are not logged in yet. Please <a href="{% url 'index' %}" >Login Here</a> to access your Notes!</h2></center>
+{% endif %}
+</body>
+</html>
+<!--<form action="/update_note/" method="POST">
+		{% csrf_token %} 
+		<input type="text" name="id" value="{{data.id}}" readonly>
+		
+		Title:
+		<input type="text" name="etitle" value="{{data.title}}"><br>
+		Content:
+		<input type="text" name="econtent" value="{{data.content}}"><br>
+
+		<input type="submit" value="submit">
+	</form>-->

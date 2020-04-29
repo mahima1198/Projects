@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+ <link rel="icon" type="image/ico" href="{% static 'Qnotes/logo_34s_icon.ico' %}" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{% static 'Qnotes/todo_list_edit.css' %}" rel="stylesheet" type="text/css"> 
+
+
+<title>TODO List</title>
+<style type="text/css">
+   body{
+  background-image: url("{% static 'Qnotes/bg.png' %}");
+}
+ </style>
+</head>
+<body>
+{%if user.email%}
+{% load static %}
+	{% include "base.html" %}
+	<form action="/create_todo/" method="POST">
+		{% csrf_token %} 
+		<center>
+			<div class="mydiv">
+			  <h2 style="margin:5px;font-family: Comic Sans MS;">To Do List</h2>
+			  <input type="text" id="title" style="font-family: Comic Sans MS;" placeholder="Add Item" name="todocont" required>
+			  <button class="submit btn2" id="addBtn" style=" font-family: Comic Sans MS;">Add</button>
+			</div>
+		</center>
+	</form>
+	<hr>
+	<center><a href="{% url 'insert_todo' %}" class="submit btn2" role="button" style=" font-family: Comic Sans MS;">SAVE</a></center>
+
+{% else %}<center>
+<h2 style="color: #1e90ff;font-family: Comic Sans MS;">You are not logged in yet. Please <a href="{% url 'index' %}" >Login Here</a> to access your Notes!</h2></center>
+{% endif %}
+</body>
+</html>

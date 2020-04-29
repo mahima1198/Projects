@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <link rel="stylesheet" type="text/css" href="MenuBar.css"/>
+    <style type="text/css">
+        #content {
+            height: 62px;
+            width: 1494px;
+        }
+    </style>
+</head>
+<body>
+      <a href="Home.aspx"> <img src="log.png" alt="Logo" style="width:236px; height:120px; "></a>
+    <form id="form3" runat="server">
+    <div id="content">
+           <asp:Button ID="Home" runat="server" Text="Home" Width="11.15%" CausesValidation="False" PostBackUrl="~/Home.aspx"/>
+           <asp:Button ID="Batman" runat="server" Text="Batman" Width="11.15%" CausesValidation="False" PostBackUrl="~/Batman.aspx" />
+           <asp:Button ID="Flash" runat="server" Text="Flash"  Width="11.15%" CausesValidation="False" PostBackUrl="~/Flash.aspx"/>
+           <asp:Button ID="Wolverine" runat="server" Text="Wolverine" Width="11.15%" CausesValidation="False" PostBackUrl="~/Wolverine.aspx"/>
+           <asp:Button ID="Trailers" runat="server" Text="Trailers" Width="11.15%" CausesValidation="False" PostBackUrl="~/Trailers.aspx"/>
+           <asp:Button ID="AboutUs" runat="server" Text="About Us" Width="11.15%" CausesValidation="False" PostBackUrl="~/AboutUs.aspx"/>
+           <asp:Button ID="Update" runat="server" Text="Update" Width="11.15%" CausesValidation="False" PostBackUrl="~/Update.aspx"/>
+           <asp:Button ID="LogOut" runat="server" Text="LogOut" Width="11.15%" CausesValidation="False" PostBackUrl="~/Login.aspx"/>
+       
+          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">    
+              <p>
+                  <br />
+              </p>
+      </asp:ContentPlaceHolder>
+           </div> 
+       
+    </form>  
+     
+      </body>
+</html>
+
+
+
+
+
+

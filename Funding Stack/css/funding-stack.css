@@ -1,0 +1,50 @@
+.bg-white{
+	background-color:#F4F4F4;
+}
+
+.bg-blue{
+	background-color:#dcd0c0; /* silk*/
+	border-radius: 0.5cm;	
+	color:white;
+}
+.bg-smallblack{
+	background-color:#373737;
+	border-radius: 0.5cm;	
+	color:white;
+}
+.bg-black{
+	background-color:black;
+	color:white;
+}	
+.bg-1 { 
+      background-color: #C0B283; /* Pale gold */
+      color: #ffffff;
+}	
+
+.fontheader{
+	font-family:Arial,Harlow Solid Italic,Colonna MT,Algerian;
+	font-size:1.5cm;
+	text-align:left;	
+	margin-left: 1.5cm;
+	
+}
+
+.numbertitle{
+	font-family: Calibri;
+	font-size: 1.5cm;
+}
+.numberdescription{
+	font-family: Calibri;
+	font-size: 1.5cm;
+
+}
+
+.navigation_font{
+	font-size: 15px;
+	color:#3b62bd	;
+}
+
+hr{
+	color: #434243;
+	size:40px;
+}

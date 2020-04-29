@@ -1,0 +1,137 @@
+﻿#Home,#Batman,#Flash,#Wolverine,#AboutUs,#Trailers,#LogOut,#Update,#wrritecomment,#viewcomment {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+ padding: 8px 24px 8px 10px;
+  font: bold .875em/1.25em "Open Sans Condensed", sans-serif;
+  letter-spacing: .075em;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+#Wolverine:hover,#Wolverine:focus {
+         background: #179b77;
+         }
+#Update:hover,#Update:focus {
+         background: #179b77;
+         }
+#Flash:hover, #Flash:focus {
+         background: #179b77;
+         }
+#Batman:hover,#Batman:focus {
+         background:#179b77
+         }
+#Home:focus, #Home:hover {
+         background:#179b77
+         }
+#Trailers:hover, #Trailers:focus {
+         background:#179b77
+         }
+ #AboutUs:hover, #AboutUs:focus {
+        background:#179b77
+    }
+ 
+
+#LogOut:hover, #LogOut:focus {
+    background:#179b77
+}
+#writecomment:hover, #viewcomment:focus {
+    background:#179b77
+}
+
+    html { 
+  background: url("backsignlogin.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+
+    background: url("backsignlogin.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 40px;
+  font-family: "Open Sans Condensed", sans-serif;
+    height: 126px;
+}
+
+#bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(http://lorempixel.com/800/500/nature) no-repeat center center fixed;
+  background-size: cover;
+  -webkit-filter: blur(5px);    
+}
+
+form {
+  position: relative;
+  width: 1364px;
+  margin: 0 auto;
+  padding: 20px 22px;
+  border-top-color: rgba(255,255,255,.4);
+  border-left-color: rgba(255,255,255,.4);
+  border-bottom-color: rgba(60,60,60,.4);
+  border-right-color: rgba(60,60,60,.4);
+              top: 31px;
+              left: -23px;
+              height: 29px;
+              border-left-style: solid;
+              border-left-width: 1px;
+              border-right-style: solid;
+              border-right-width: 1px;
+              border-top-style: solid;
+              border-top-width: 1px;
+              border-bottom-style: solid;
+              border-bottom-width: 1px;
+          }
+
+form input, form button {
+  border-bottom-color: rgba(255,255,255,.5);
+  border-right-color: rgba(60,60,60,.35);
+  border-top-color: rgba(60,60,60,.35);
+  border-left-color: rgba(80,80,80,.45);
+  background-color: rgba(0,0,0,.2);
+  background-repeat: no-repeat;
+  padding: 8px 24px 8px 10px;
+  font: bold .875em/1.25em "Open Sans Condensed", sans-serif;
+  letter-spacing: .075em;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  margin-bottom: 19px;
+              border-left-style: solid;
+              border-left-width: 1px;
+              border-right-style: solid;
+              border-right-width: 1px;
+              border-top-style: solid;
+              border-top-width: 1px;
+              border-bottom-style: solid;
+              border-bottom-width: 1px;
+    margin-left: 0px;
+}
+
+form Textbox:focus { background-color: rgba(0,0,0,.4); }
+
+::-webkit-input-placeholder { color: #ccc; text-transform: uppercase; }
+::-moz-placeholder { color: #ccc; text-transform: uppercase; }
+:-ms-input-placeholder { color: #ccc; text-transform: uppercase; }
+
+
+td:hover,td:focus {
+  opacity: 0.5;
+  
+}
+
+
+

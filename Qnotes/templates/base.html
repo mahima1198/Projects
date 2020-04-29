@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+ <link rel="icon" type="image/ico" href="{% static 'Qnotes/favicon.png' %}"/>
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+    <style>
+    .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  {% load static %}
+
+  <link rel="stylesheet" href="{% static 'Qnotes/notes.css' %}"> 
+   <script src="{% static 'Qnotes/notes.js' %}"></script>
+  </head>
+  <body>
+   <nav class="navbar navbar-inverse" style="border-radius: 0px; background-color: black;">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>                        
+      </button>
+      {% load static %}
+      <a href="{% url 'show_notes' %}">
+      <img src="{% static 'Qnotes/logo3.jpeg' %}"  alt="" width="120" height="55" style="margin-top: 10px;" /></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-left" style="margin-top: 10px;margin-left: 10px;">
+
+      {% if n_status %}
+      <li style="border-bottom: 3px solid white ;"><a href="{% url 'show_notes' %}" data-toggle="tooltip" title="Notes"><i class="material-icons" style="color: white; ">note_add</i></a></li></a></li>
+      {% else %}
+       <li><a href="{% url 'show_notes' %}" data-toggle="tooltip" title="Notes"><i class="material-icons">note_add</i></a></li></a></li>
+       {% endif %}
+
+      {% if f_status %}
+      <li style="border-bottom: 3px solid white;"><a href="{% url 'show_fav' %}" data-toggle="tooltip" title="Favourites"><i class="material-icons" style="color: white;">star_border</i></a></li>
+      {% else %}
+      <li><a href="{% url 'show_fav' %}" data-toggle="tooltip" title="Favourites"><i class="material-icons">star_border</i></a></li>
+      {% endif %}
+
+      {% if t_status %}
+      <li style=" border-bottom: 3px solid white;"><a href="{% url 'show_todo' %}" data-toggle="tooltip" title="TODO" class="bt"><i class="material-icons" style="color: white;">view_list</i></a></li>
+      {% else %}
+      <li><a href="{% url 'show_todo' %}" data-toggle="tooltip" title="TODO" class="bt"><i class="material-icons">view_list</i></a></li>
+      {% endif %}
+      
+      {% if a_status %}
+      <li style="border-bottom: 3px solid white;"><a href="{% url 'show_archive' %}" data-toggle="tooltip" title="Archive"><i class="material-icons" style="color:white;">archive</i></a></li>
+      {% else %}
+      <li><a href="{% url 'show_archive' %}" data-toggle="tooltip" title="Archive"><i class="material-icons">archive</i></a></li>
+      {% endif %}
+
+      {% if s_status %}
+      <li style="border-bottom: 3px solid white;"><a href="{% url 'goto_search_note' %}" data-toggle="tooltip" title="Search"><i class="material-icons" style="color:white;">search</i></a></li>
+      {% else %}
+      <li><a href="{% url 'goto_search_note' %}" data-toggle="tooltip" title="Search"><i class="material-icons">search</i></a></li>
+      {% endif %}
+
+      {% if share_status %}
+      <li style="border-bottom: 3px solid white;"><a href="{% url 'show_sharednotes' %}" data-toggle="tooltip" title="Share"><i class="material-icons" style="color:white;">group</i></a></li>
+      {% else %}
+      <li><a href="{% url 'show_sharednotes' %}" data-toggle="tooltip" title="Share"><i class="material-icons">group</i></a></li>
+      {% endif %}
+      
+      </ul>
+      <ul class="nav navbar-nav navbar-center" style="margin-top: 20px;">
+      <li style="color: #1e90ff;font-family: Comic Sans MS;"><font size="4">Welcome {{user.first_name}}</font></li>
+      
+    </ul>
+    <ul class="nav navbar-nav navbar-right" style="margin-top: 20px;">
+      <li><form method="post" action="{% url 'logout' %}">
+        &nbsp;&nbsp;&nbsp;
+  {% csrf_token %}
+  
+  <button type="submit" style="background:transparent; color: darkgrey;border:none;"><i class="material-icons" data-toggle="tooltip" title="Logout">exit_to_app</i></button>
+</form></li>
+      </ul>
+    </div>
+    
+  </nav>
+  </body>
+</html>
