@@ -98,7 +98,7 @@ WSGI_APPLICATION = 'Qnotes.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'Qnotes',
+        'NAME': 'Qnotes'
     }
 }
 
