@@ -152,14 +152,14 @@ def password_reset_request(request):
             print("ok")
             s=smtplib.SMTP('smtp.gmail.com',587)
             s.starttls()
-            s.login("gameinsighter01@gmail.com","Int@8090")
+            s.login(emailid,passw)
             rand_password=''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase+ string.digits, k=10))
             std_obj = Student.objects.get(email=email)
             std_obj.set_password(rand_password)
             std_obj.save()
             message="Your new password is: "+rand_password+". Please use this password to login again."
             print(message)
-            s.sendmail("gameinsighter01@gmail.com",email,message)
+            s.sendmail(emailid,email,message)
             s.quit()
             return render(request,"myapp/password_send.html")
         else:
