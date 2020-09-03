@@ -1,0 +1,481 @@
+[
+{
+   "model": "myapp.topic",
+   "pk": 1,
+   "fields": {
+      "name": "Web Development",
+      "category": "Development"
+   }
+},
+{
+   "model": "myapp.topic",
+   "pk": 2,
+   "fields": {
+      "name": "Management",
+      "category": "Business"
+   }
+},
+{
+   "model": "myapp.topic",
+   "pk": 3,
+   "fields": {
+      "name": "IT Certification",
+      "category": "IT & Software"
+   }
+},
+{
+   "model": "myapp.topic",
+   "pk": 4,
+   "fields": {
+      "name": "Sports",
+      "category": "Health & Fitness"
+   }
+},
+{
+   "model": "myapp.topic",
+   "pk": 5,
+   "fields": {
+      "name": "Economics",
+      "category": "Finance & Accounting"
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 1,
+   "fields": {
+      "topic": 3,
+      "name": "CCNA",
+      "price": "199.99",
+      "hours": "1.00",
+      "for_everyone": false,
+      "description": "",
+      "interested": 0,
+      "stages": 3
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 2,
+   "fields": {
+      "topic": 3,
+      "name": "AWS",
+      "price": "119.99",
+      "hours": "1.00",
+      "for_everyone": true,
+      "description": "",
+      "interested": 0,
+      "stages": 3
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 3,
+   "fields": {
+      "topic": 3,
+      "name": "CompTIA Security",
+      "price": "139.99",
+      "hours": "1.00",
+      "for_everyone": false,
+      "description": "",
+      "interested": 0,
+      "stages": 3
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 4,
+   "fields": {
+      "topic": 3,
+      "name": "Oracle SQL",
+      "price": "159.99",
+      "hours": "1.00",
+      "for_everyone": false,
+      "description": "",
+      "interested": 0,
+      "stages": 3
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 5,
+   "fields": {
+      "topic": 5,
+      "name": "Microeconomics",
+      "price": "199.99",
+      "hours": "1.00",
+      "for_everyone": false,
+      "description": "",
+      "interested": 0,
+      "stages": 3
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 6,
+   "fields": {
+      "topic": 5,
+      "name": "Introduction to Economics",
+      "price": "174.99",
+      "hours": "1.00",
+      "for_everyone": true,
+      "description": "",
+      "interested": 0,
+      "stages": 2
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 7,
+   "fields": {
+      "topic": 5,
+      "name": "Global Economics",
+      "price": "149.99",
+      "hours": "1.00",
+      "for_everyone": true,
+      "description": "",
+      "interested": 0,
+      "stages": 4
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 8,
+   "fields": {
+      "topic": 1,
+      "name": "Web Dev Bootcamp",
+      "price": "199.99",
+      "hours": "1.00",
+      "for_everyone": true,
+      "description": "",
+      "interested": 0,
+      "stages": 5
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 9,
+   "fields": {
+      "topic": 1,
+      "name": "Web Design",
+      "price": "159.99",
+      "hours": "1.00",
+      "for_everyone": false,
+      "description": "",
+      "interested": 0,
+      "stages": 2
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 10,
+   "fields": {
+      "topic": 1,
+      "name": "Web Development Masterclass",
+      "price": "124.99",
+      "hours": "1.00",
+      "for_everyone": true,
+      "description": "",
+      "interested": 0,
+      "stages": 3
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 11,
+   "fields": {
+      "topic": 1,
+      "name": "Build Responsive Websites",
+      "price": "149.99",
+      "hours": "1.00",
+      "for_everyone": false,
+      "description": "",
+      "interested": 0,
+      "stages": 4
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 12,
+   "fields": {
+      "topic": 2,
+      "name": "Innovation for Business",
+      "price": "174.99",
+      "hours": "1.00",
+      "for_everyone": true,
+      "description": "",
+      "interested": 0,
+      "stages": 1
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 13,
+   "fields": {
+      "topic": 2,
+      "name": "Leadership Skills",
+      "price": "184.99",
+      "hours": "1.00",
+      "for_everyone": true,
+      "description": "",
+      "interested": 0,
+      "stages": 2
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 14,
+   "fields": {
+      "topic": 2,
+      "name": "Project Management",
+      "price": "149.99",
+      "hours": "1.00",
+      "for_everyone": true,
+      "description": "",
+      "interested": 0,
+      "stages": 3
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 15,
+   "fields": {
+      "topic": 4,
+      "name": "Sports Psychology",
+      "price": "174.99",
+      "hours": "1.00",
+      "for_everyone": true,
+      "description": "",
+      "interested": 0,
+      "stages": 5
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 16,
+   "fields": {
+      "topic": 4,
+      "name": "Introduction to Soccer",
+      "price": "134.99",
+      "hours": "1.00",
+      "for_everyone": true,
+      "description": "",
+      "interested": 0,
+      "stages": 2
+   }
+},
+{
+   "model": "myapp.course",
+   "pk": 17,
+   "fields": {
+      "topic": 4,
+      "name": "Swimming Guide for Beginners",
+      "price": "99.99",
+      "hours": "11.00",
+      "for_everyone": true,
+      "description": "",
+      "interested": 0,
+      "stages": 4
+   }
+},
+{
+   "model": "myapp.student",
+   "pk": 2,
+   "fields": {
+      "school": "123 University Avenue",
+      "city": "WS",
+      "profile_pic": "",
+      "interested_in": [
+         1,
+         2,
+         3
+      ]
+   }
+},
+{
+   "model": "myapp.student",
+   "pk": 3,
+   "fields": {
+      "school": "235 Sunset Avenue",
+      "city": "VC",
+      "profile_pic": "",
+      "interested_in": [
+         2,
+         5
+      ]
+   }
+},
+{
+   "model": "myapp.student",
+   "pk": 4,
+   "fields": {
+      "school": "306 Prince Street",
+      "city": "CG",
+      "profile_pic": "",
+      "interested_in": [
+         2,
+         3,
+         4
+      ]
+   }
+},
+{
+   "model": "myapp.student",
+   "pk": 5,
+   "fields": {
+      "school": "442 Sunset Avenue",
+      "city": "MR",
+      "profile_pic": "",
+      "interested_in": [
+         3,
+         4,
+         5
+      ]
+   }
+},
+{
+   "model": "myapp.student",
+   "pk": 6,
+   "fields": {
+      "school": "987 King Street",
+      "city": "WS",
+      "profile_pic": "",
+      "interested_in": [
+         1,
+         2
+      ]
+   }
+},
+{
+   "model": "myapp.student",
+   "pk": 13,
+   "fields": {
+      "school": null,
+      "city": "WS",
+      "profile_pic": "",
+      "interested_in": []
+   }
+},
+{
+   "model": "myapp.student",
+   "pk": 14,
+   "fields": {
+      "school": null,
+      "city": "WS",
+      "profile_pic": "",
+      "interested_in": [
+         1,
+         3
+      ]
+   }
+},
+{
+   "model": "myapp.student",
+   "pk": 15,
+   "fields": {
+      "school": null,
+      "city": "WS",
+      "profile_pic": "profile/61e030ca5106db3731eb1058432c6bbb7b4b5d3efbfe63001fbd56d9ae288daf.png",
+      "interested_in": [
+         1,
+         2
+      ]
+   }
+},
+{
+   "model": "myapp.student",
+   "pk": 16,
+   "fields": {
+      "school": null,
+      "city": "WS",
+      "profile_pic": "",
+      "interested_in": [
+         4,
+         5
+      ]
+   }
+},
+{
+   "model": "myapp.order",
+   "pk": 1,
+   "fields": {
+      "course": 8,
+      "student": 2,
+      "levels": 1,
+      "order_status": 1,
+      "order_date": "2020-06-21",
+      "total_price": "0.00"
+   }
+},
+{
+   "model": "myapp.order",
+   "pk": 2,
+   "fields": {
+      "course": 14,
+      "student": 2,
+      "levels": 1,
+      "order_status": 1,
+      "order_date": "2020-06-21",
+      "total_price": "0.00"
+   }
+},
+{
+   "model": "myapp.order",
+   "pk": 3,
+   "fields": {
+      "course": 5,
+      "student": 6,
+      "levels": 1,
+      "order_status": 1,
+      "order_date": "2020-06-21",
+      "total_price": "0.00"
+   }
+},
+{
+   "model": "myapp.order",
+   "pk": 4,
+   "fields": {
+      "course": 2,
+      "student": 5,
+      "levels": 1,
+      "order_status": 1,
+      "order_date": "2020-06-21",
+      "total_price": "0.00"
+   }
+},
+{
+   "model": "myapp.order",
+   "pk": 5,
+   "fields": {
+      "course": 13,
+      "student": 3,
+      "levels": 1,
+      "order_status": 1,
+      "order_date": "2020-06-21",
+      "total_price": "0.00"
+   }
+},
+{
+   "model": "myapp.order",
+   "pk": 6,
+   "fields": {
+      "course": 14,
+      "student": 4,
+      "levels": 1,
+      "order_status": 1,
+      "order_date": "2020-06-21",
+      "total_price": "0.00"
+   }
+},
+{
+   "model": "myapp.order",
+   "pk": 16,
+   "fields": {
+      "course": 2,
+      "student": 13,
+      "levels": 1,
+      "order_status": 1,
+      "order_date": "2020-01-01",
+      "total_price": "0.00"
+   }
+}
+]

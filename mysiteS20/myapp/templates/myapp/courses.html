@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+    <h5> List Of Courses</h5>
+    <ol>
+        {% for courses in courlist %}
+             <li><a href="{% url 'myapp:coursedetail' courses.id %}">{{ courses }}</a></li>
+        {% endfor %}
+    </ol>
+    <button style="width :250px" class="btn btn-lg btn-primary btn-block" ><a style="color: white" href="{% url 'myapp:placeorder' %}">Click here to place order</a></button>
+{% endblock %}

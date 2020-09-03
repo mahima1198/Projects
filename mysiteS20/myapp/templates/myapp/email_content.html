@@ -1,0 +1,11 @@
+{% autoescape off %}
+Hello {{ user.first_name }},
+                            Please Click on the below link in order to setup new password!!
+
+    {{ protocol }}://{{ domain }}{% url 'learnapp:reset_sure' uidb64=uid token=token %}
+    For Further query please contact us on our email id.
+
+Thank You,
+Regards,
+Team E-Learning
+{% endautoescape %}

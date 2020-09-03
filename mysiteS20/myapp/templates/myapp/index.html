@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+{% csrf_token %}
+{% block body_block %}
+    <h5>Your Login time is :: {{login_time}}</h5>
+    {% if top_list %}
+    <h5>List of Topics</h5>
+    <ol>
+        {% for top in top_list %}
+            <li><a href="{% url 'myapp:detail' top.id %}">{{ top.name }}</a></li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <strong>There are no available topics!</strong>
+{% endif %}
+
+{% endblock %}

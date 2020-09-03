@@ -1,0 +1,20 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+    <h5> First Name: {{ first_name }} </h5>
+    <h5>Last Name: {{ last_name }}</h5>
+    <h5>List of Courses Ordered:</h5>
+    <ol>
+        {% for i in ordered_course %}
+            <li> {{ i }} </li>
+        {% endfor %}
+    </ol>
+
+    <h5>List of Interested Topics:</h5>
+    <ol>
+        {% for i in interested %}
+            <li> {{ i }} </li>
+        {% endfor %}
+    </ol>
+
+
+{% endblock %}

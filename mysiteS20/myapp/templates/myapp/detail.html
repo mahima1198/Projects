@@ -1,0 +1,10 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+   <h5>List of Courses ::</h5>
+    <ol>
+        {% for i in all_courses %}
+            <li> {{ i }} </li>
+        {% endfor %}
+    </ol>
+
+{% endblock %}

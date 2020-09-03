@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Learning WebApp!</title>
+</head>
+<body>
+
+<h5>Category :: {{ topic.category }}</h5>
+
+<h5>List of Courses ::</h5>
+    <ol>
+        {% for i in all_courses %}
+            <li> {{ i }} </li>
+        {% endfor %}
+    </ol>
+<p><a href="{% url 'myapp:index' %}">Index page</a></p>
+
+</body>
+</html>

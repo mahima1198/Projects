@@ -1,0 +1,18 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+    {% for course in courlist %}
+        {{ course }}<br>
+    {% endfor %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <br>
+    <hr>
+        {{ form.as_p }}
+
+        <div class="form-group">
+            <button style="width: 130px" class="btn btn-lg btn-primary btn-block">Place Order</button>
+        </div>
+    </form>
+{% endblock %}
