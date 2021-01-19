@@ -1,0 +1,13 @@
+[Unit]
+Description=docker compose
+Requires=docker.service
+After=docker.service
+[Service]
+Type=oneshot
+RemainAfterExit=true
+WorkingDirectory=/home/ubuntu
+User=ubuntu
+ExecStart=/usr/bin/find . -name docker-compose.yml -exec /usr/bin/docker-compose -f "{}" up -d \;
+ExecStop=/usr/bin/find . -name docker-compose.yml -exec /usr/bin/docker-compose -f "{}" down \;
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,159 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<style>
+    .mbu {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width:280px;
+    font-size: 16px;
+    margin: 0px 20px 10px 50px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .mbu2 {
+  
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+  }
+  
+  .mbu2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  
+</style>
+{% endblock style %}
+{%block body%}
+    <!--Page Banner Area Start-->
+    <div class="page-banner-area" style="background-image: url({{details.images.image1}});background-repeat: no-repeat;background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-content text-center">
+                        <h1>{{details.Name}}</h1>
+                        <ul class="page-breadcrumb">
+                            <li><a href="/">Home</a></li>
+                            <li>Games</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Page Banner Area End-->
+    
+    <!--Games Details Area Start-->
+
+<div class="games-details-area section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-xs-45" style="margin-top: 100px; margin-bottom: 100px;">
+        <div class="container">
+            <div class="row">
+               <div class="col-lg-8">
+                   <div class="row">
+                       <div class="col-12">
+                           <div class="game-image-gallery-wrap">
+                            <div class="game-image-large">
+                                <div class="game-image img-full">
+                                    <img src="{{details.images.image1}}" alt="">
+                                </div>
+                                <div class="game-image img-full">
+                                    <img src="{{details.images.image2}}" alt="">
+                                </div>
+                                <div class="game-image img-full">
+                                    <img src="{{details.images.image4}}" alt="">
+                                </div>
+                                <div class="game-image img-full">
+                                    <img src="{{details.images.image3}}" alt="">
+                                </div>
+                            </div>
+                            <div class="game-image-thumbs">
+                                <div class="sm-image"><img src="{{details.images.image2}}" alt="product image thumb"></div>
+                                <div class="sm-image"><img src="{{details.images.image3}}" alt="product image thumb"></div>
+                                <div class="sm-image"><img src="{{details.images.image4}}" alt="product image thumb"></div>
+                                <div class="sm-image"><img src="{{details.images.image1}}" alt="product image thumb"></div>
+                            </div>
+                            <div class="game-description mb-45">
+                               <h3>{{details.Name}}</h3>
+                               <p>{{details.Description}}</p>
+                                </div>
+                        </div>
+                       </div>
+                   </div>
+                   <div class="row">
+                           <div class="col-12 mb-60 ">
+                               <div class="loadingframe text-center mt-0 mb-5">
+                                   <button class="mbu mbu2 " id="b1" data-src="{{ details.graphs.g2 }}" data-width="900" data-height="650">Average vs Peak Players</button>
+                                   <button  class="mbu mbu2 " id="b2" data-src="{{ details.graphs.g3 }}" data-width="900" data-height="650">Average Players per Month </button>
+                                   <button class="mbu mbu2 " id="b3" data-src="{{ details.graph.g4 }}" data-width="900" data-height="650">Players playing Worldwide</button>
+                                   <button  class="mbu mbu2" id="b4" data-src="{{ details.graphs.g5 }}" data-width="900" data-height="650">Positive vs Negative Reviews</button>
+                               </div>
+                               <iframe id='frame'  style="border:none;margin-top:-15px;margin-left:-15px;" seamless="seamless" frameborder="0" scrolling="no"></iframe>
+                           </div>
+                   </div>
+
+                   <div class="row">
+                       <div class="col-12">
+                           <div class="review-wrap">
+                              <h3>reviews</h3>
+                              <!--Single Review Start-->
+                               {% for review in get_reviews %}
+                              <div class="single-review mb-30">
+
+                                  <h4>{{ review.user_name }}</h4>
+                                  <p>{{ review.review }}</p>
+                                  <div class="review-name-action">
+                                      <p>Date Posted:</p><p>{{ review.review_date }}</p>
+                                  </div>
+                              </div>
+                               {% endfor %}
+                              <!--Single Review End-->
+                              <!--Single Review Start-->
+                              <!--Single Review End-->
+                              <div class="reply-btn">
+                                <a href="#">view more <i class="icofont-long-arrow-right"></i></a>
+                              </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-4">
+                    <div class="sidebar-area mt-sm-50 mt-xs-50 bg-dark">
+                        <!--Single Sidebar Widget Start-->
+                        <iframe width="335px" height="250px" frameborder="0" scrolling="no" src="{{ details.graphs.g1 }}"></iframe>
+                        <div class="single-sidebar-widget mb-45">
+                            <h3 style="color:white;">System Requirements:</h3>
+                                    {% for key, value in sys_req.items %}
+                                       <div> <h4 style="color:white;"><b>{{ key }} :</b></h4></div><div><h4 style="color:white;">{{value}}</h4></div>
+                                        <br>
+                                    {% endfor %}
+                        <!--Single Sidebar Widget End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script>
+    function iframeChange() {
+    var buttons = document.querySelector(".loadingframe"),
+        iframe = document.getElementById('frame');
+
+    buttons.addEventListener("click", function (e) {
+        iframe.src = e.target.dataset.src;
+        iframe.width = e.target.dataset.width;
+        iframe.height = e.target.dataset.height;
+    });
+}
+window.onload = iframeChange;
+</script>
+{% endblock body %}

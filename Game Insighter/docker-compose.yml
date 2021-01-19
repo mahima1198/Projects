@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  webapp:
+    container_name: webapp
+    image: mahima1198/webapp:1.0
+    volumes: 
+      - ./etc/mysql/db.cnf:/etc/mysql/db.cnf:ro
+      
+  nginx_server:
+    container_name: nginx_server
+    image: nginx
+    ports: 
+      - 80:80
+    volumes: 
+      - ./etc/nginx/gameinsighter.conf:/etc/nginx/conf.d/gameinsighter.conf:ro
+      - ./gameinsighter_project/webapp/static/:/var/www/gameinsighter_staticfiles:ro
+    depends_on: 
+      - webapp

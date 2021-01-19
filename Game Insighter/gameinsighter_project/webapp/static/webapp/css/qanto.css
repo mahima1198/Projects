@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Qanto';
+    src: url('../fonts/qanto/Qanto.bin');
+    src: url('../fonts/qanto/Qanto-1.bin') format('embedded-opentype'),
+        url('../fonts/qanto/Qanto-2.bin') format('woff2'),
+        url('../fonts/qanto/Qanto-3.bin') format('woff'),
+        url('../fonts/qanto/Qanto.ttf') format('truetype'),
+        url('../fonts/qanto/Qanto.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanto';
+    src: url('../fonts/qanto/Qanto_1.bin');
+    src: url('../fonts/qanto/Qanto_1-1.bin') format('embedded-opentype'),
+        url('../fonts/qanto/Qanto_1-2.bin') format('woff2'),
+        url('../fonts/qanto/Qanto_1-3.bin') format('woff'),
+        url('../fonts/qanto/Qanto_1.ttf') format('truetype'),
+        url('../fonts/qanto/Qanto_1.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanto';
+    src: url('../fonts/qanto/Qanto_2.bin');
+    src: url('../fonts/qanto/Qanto_2-1.bin') format('embedded-opentype'),
+        url('../fonts/qanto/Qanto_2-2.bin') format('woff2'),
+        url('../fonts/qanto/Qanto_2-3.bin') format('woff'),
+        url('../fonts/qanto/Qanto_2.ttf') format('truetype'),
+        url('../fonts/qanto/Qanto_2.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Qanto';
+    src: url('../fonts/qanto/Qanto_3.bin');
+    src: url('../fonts/qanto/Qanto_3-1.bin') format('embedded-opentype'),
+        url('../fonts/qanto/Qanto_3-2.bin') format('woff2'),
+        url('../fonts/qanto/Qanto_3-3.bin') format('woff'),
+        url('../fonts/qanto/Qanto_3.ttf') format('truetype'),
+        url('../fonts/qanto/Qanto_3.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+

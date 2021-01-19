@@ -1,0 +1,53 @@
+---
+# tasks file for webapp_dependencies
+- name: Update apt packages
+  apt: 
+    update_cache: yes
+
+- name: Install docker-compose
+  apt:
+    name: docker-compose
+    state: latest 
+    update_cache: yes
+
+- name: Create docker group
+  group:
+    name: docker
+
+- name: Add ubuntu to docker group
+  user: 
+    name: ubuntu
+    groups: docker
+
+- name: Git clone
+  git:
+    repo: ' '
+    dest: /home/ubuntu
+    clone: yes
+    update: no
+
+- name: Copy file with owner and permissions
+  copy:
+    src: /etc/mysql/db.cnf
+    dest: /home/ubuntu/etc/database/db.cnf
+    owner: ubuntu
+    group: ubuntu
+    force: yes
+    mode: '0644'
+
+- name: Copy systemd script file with owner and permissions
+  copy:
+    src: /home/mahima/gameinsighter/etc/systemd_scripts/docker-compose-gi.service
+    dest: /etc/systemd/system/
+    owner: root
+    group: root
+    force: yes
+    mode: '0644'
+
+- name: Restart daemon
+  systemd:
+    name: docker-compose-gi
+    daemon_reload: yes
+    state: restarted
+    enabled: yes
+    masked: no

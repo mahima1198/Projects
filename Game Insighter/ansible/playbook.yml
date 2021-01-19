@@ -1,0 +1,4 @@
+---
+- hosts: "gi_hosts"
+  roles: 
+    - webapp_dependencies

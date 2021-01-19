@@ -1,0 +1,133 @@
+<!doctype html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Game Insighter</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="{%static 'webapp/images/favicon.bin' %}" type="img/x-icon" rel="shortcut icon">
+
+    <!-- All css files are included here. -->
+    <link rel="stylesheet" href="{% static 'webapp/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'webapp/css/qanto.css'%}">
+    <link rel="stylesheet" href="{% static 'webapp/css/bauhaus93.css'%}">
+    <link rel="stylesheet" href="{% static 'webapp/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'webapp/css/icofont.min.css'%}">
+    <link rel="stylesheet" href="{% static 'webapp/css/plugins.css'%}">
+    <link rel="stylesheet" href="{% static 'webapp/css/style.css'%}">
+    <!-- Modernizr JS -->
+    <script src="{% static 'webapp/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+{% block style %} 
+{% endblock style%}
+</head>
+
+<body>
+    <div id="main-wrapper">
+        <!--Header section start-->
+        <header class="header header-static bg-black header-sticky bg-dark">
+            <div class="menu-right">
+                <div class="container-fluid">
+                    <div class="container-1520 m-0">
+                        <div class="featured-title">
+                            <h2 style="color:white;justify-content:center;">GAME INSIGHTER</h2>
+                        </div>
+                    </div>
+                    <div class="row" style="margin:0;">
+                        <!--Menu start-->
+                        <div class="col-lg-12 col-12 order-md-3 order-lg-2 d-flex justify-content-center ">
+                            <nav class="main-menu menu-style-2">
+                                <ul>
+                                    <li><a href="{% url 'webapp:home' %}">Home</a></li>
+                                    <li><a href="{% url 'webapp:games' %}">Games</a></li>
+                                    <li><a href="#game_trailers">Game Videos</a></li>
+                                    <li><a href="{% url 'webapp:blogs' %}">Blogs</a></li>
+                                    <li><a href="{% url 'webapp:contact' %}">Contact</a></li>
+                                    <div style="width: 160px;"></div>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!--Menu end-->
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex d-lg-none">
+                            <div class="mobile-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Header section end-->
+        {% block body %}
+
+        {% endblock body %}
+        <footer class="footer-section style-2 section bg-dark">
+
+            <div class="footer-top section pt-80 pt-lg-70 pt-md-60 pt-sm-50 pt-xs-40 pb-80 pb-lg-70 pb-md-60 pb-sm-15 pb-xs-40"
+                style="color:black;">
+                <div class="container container-1520">
+                    <div class="row justify-content-lg-between">
+                        <div class="col-xl-3 col-lg-2 col-md-3">
+                            <div class="footer-widget">
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-md-9">
+                            <div class="footer-widget">
+                                <div class="footer-nav">
+                                    <nav>
+                                        <ul>
+                                            <li><a href="#">forums</a></li>
+                                            <li><a href="#">demo</a></li>
+                                            <li><a href="#">support</a></li>
+                                            <li><a href="#">terms & conditions</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-4 col-md-12">
+                            <div class="footer-widget">
+                                <div class="footer-social">
+                                    <span>follow us:</span>
+                                    <ul>
+                                        <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                                        <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                                        <li><a href="#"><i class="icofont-instagram"></i></a></li>
+                                        <li><a href="#"><i class="icofont-youtube-play"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom border-color section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright text-center">
+                                <p>Copyright &copy;2018 . All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+<!-- Placed js at the end of the document so the pages load faster -->
+<!-- All jquery file included here -->
+<script src="{% static 'webapp/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'webapp/js/popper.min.js' %}"></script>
+<script src="{% static 'webapp/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'webapp/js/plugins.js' %}"></script>
+<script src="{% static 'webapp/js/main.js' %}"></script>
+</body>
+
+</html>

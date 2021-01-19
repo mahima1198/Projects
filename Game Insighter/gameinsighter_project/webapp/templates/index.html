@@ -1,0 +1,395 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{%block body%}
+
+<div class="hero-section section position-relative">
+    <div class="hero-slider">
+        <div class="hero-item hero-item-2"
+            style="background-image: url( {% static 'webapp/images/wallpapers/g3_4.jpg' %} )">
+        </div>
+        <div class="hero-item hero-item-2"
+            style="background-image: url({% static 'webapp/images/wallpapers/g7_2.jpg' %})">
+        </div>
+        <div class="hero-item hero-item-2"
+            style="background-image: url({% static 'webapp/images/wallpapers/g11_1.jpg' %})">
+        </div>
+    </div>
+</div>
+
+<div class="featured-section section pb-95 pb-lg-75 pb-md-65 pb-sm-55 pb-xs-45">
+    <div class="container-fluid p-0 ">
+        <div class="featured-title col-12" style="justify-content: center;">
+            <h2>FEATURED GAMES</h2>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="featured-slide">
+                    <div class="single-featured img-full">
+                        <a href="#"><img src="{% static 'webapp/images/wallpapers/g1_1.jpg' %}"
+                                style="height:300px;width: 100%;" alt=""></a>
+                    </div>
+                    <div class="single-featured img-full">
+                        <a href="#"><img src="{% static 'webapp/images/wallpapers/g2_1.jpg' %}"
+                                style="height:300px;width: 100%;" alt=""></a>
+                    </div>
+                    <div class="single-featured img-full">
+                        <a href="#"><img src="{% static 'webapp/images/wallpapers/g3_1.jpg' %}"
+                                style="height:300px;width: 100%;" alt=""></a>
+                    </div>
+                    <div class="single-featured img-full">
+                        <a href="#"><img src="{% static 'webapp/images/wallpapers/g4_1.jpg' %}"
+                                style="height:300px;width: 100%;" alt=""></a>
+                    </div>
+                    <div class="single-featured img-full">
+                        <a href="#"><img src="{% static 'webapp/images/wallpapers/g5_1.jpg' %}"
+                                style="height:300px;width: 100%;" alt=""></a>
+                    </div>
+                    <div class="single-featured img-full">
+                        <a href="#"><img src="{% static 'webapp/images/wallpapers/g6_1.jpg' %}"
+                                style="height:300px;width: 100%;" alt=""></a>
+                    </div>
+                    <div class="single-featured img-full">
+                        <a href="#"><img src="{% static 'webapp/images/wallpapers/g7_1.jpg' %}"
+                                style="height:300px;width: 100%;" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="new-game-area section pb-50 pb-lg-30 pb-md-20 pb-sm-10 pb-xs-0" id="games">
+    <div class="container" style="margin-top: 80px;">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2> games</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row game-slide">
+            <div class="col-4">
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/271590'><img src="{% static 'webapp/images/wallpapers/g1_1.jpg' %}"
+                                height="210px;" alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/271590'>Grand Theft Auto V</a></h4>
+                        <span>pc/xbox/ps4</span>
+                    </div>
+                </div>
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/812140'><img src="{% static 'webapp/images/wallpapers/g2_1.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/812140'>Assassin's Creed Odyssey</a></h4>
+                        <span>pc/xbox/ps4</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/578080'><img src="{% static 'webapp/images/wallpapers/g3_1.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/578080'>PUBG</a></h4>
+                        <span>pc/xbox/ps4/android/ios</span>
+                    </div>
+                </div>
+
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/552520'><img src="{% static 'webapp/images/wallpapers/g4_1.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/552520'>Far Cry 5</a></h4>
+                        <span>pc/xbox/ps4</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-4">
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/252950'><img src="{% static 'webapp/images/wallpapers/g5_1.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/252950'>Rocket League</a></h4>
+                        <span>pc/xbox/ps4</span>
+                    </div>
+                </div>
+
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/466560'><img src="{% static 'webapp/images/wallpapers/g6_1.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/466560'>Northgard</a></h4>
+                        <span>pc/xbox/ps4</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/730'><img src="{% static 'webapp/images/wallpapers/g7_1.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/730'>Counter Strike Global offensive</a></h4>
+                        <span>pc/xbox/ps4</span>
+                    </div>
+                </div>
+
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/359550'><img src="{% static 'webapp/images/wallpapers/g8_1.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/359550'>Tom Clancy's Rainbow Six Siege</a></h4>
+                        <span>pc/xbox/ps4</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-4">
+
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/346110'><img src="{% static 'webapp/images/wallpapers/g9_1.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/346110'>ARK Survival Evolved</a></h4>
+                        <span>pc/xbox/ps4/android/ios</span>
+                    </div>
+                </div>
+
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/704270'><img src="{% static 'webapp/images/wallpapers/g10_1.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/704270'>Generation Zero</a></h4>
+                        <span>pc/xbox/ps4</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/381210'><img src="{% static 'webapp/images/wallpapers/g11_1.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/381210'>Dead by Daylight</a></h4>
+                        <span>pc/xbox/ps4/android</span>
+                    </div>
+                </div>
+
+                <div class="single-game mb-50">
+                    <div class="game-img">
+                        <a href='game_details/252490'><img src="{% static 'webapp/images/wallpapers/g12_1.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="game-content">
+                        <h4><a href='game_details/252490'>Rust</a></h4>
+                        <span>pc</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="video-section section pb-135 pb-lg-115 pb-md-105 pb-sm-95 pb-xs-85" id="game_trailers">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters align-items-end">
+            <div class="col-12">
+                <div class="video-slider-active">
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g1_4.jpg' %}" height="282px" alt="">
+                            <div class="video-content content-center">
+                                <h3>Grand Theft Auto V</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=hvoD7ehZPcM"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g2_4.jpg' %}" alt="">
+                            <div class="video-content content-center">
+                                <h3>Assassin's Creed Odyssey</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=BRZ79YUYkjw"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g3_4.jpg' %}" alt="">
+                            <div class="video-content content-center">
+                                <h3>PUBG</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=9Zev9vfehBw"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g4_4.jpg' %}" alt="">
+                            <div class="video-content content-center">
+                                <h3>Far Cry 5</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=Avpwn3dYkp8"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g5_4.jpg' %}" height="282px" alt="">
+                            <div class="video-content content-center">
+                                <h3>Rocket League</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=79FBliZsIuQ"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g6_4.jpg' %}" alt="">
+                            <div class="video-content content-center">
+                                <h3>Northgard</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=ISgHBgyJWls"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g7_4.jpg' %}" alt="">
+                            <div class="video-content content-center">
+                                <h3>Counter Strike Global offensive</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=edYCtaNueQY"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g8_4.jpg' %}" alt="">
+                            <div class="video-content content-center">
+                                <h3>Tom Clancy's Rainbow Six Siege</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=KlbLLRdg9u8"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g9_4.jpg' %}" alt="">
+                            <div class="video-content content-center">
+                                <h3>ARK Survival Evolved</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=FW9vsrPWujI"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g10_4.jpg' %}" alt="">
+                            <div class="video-content content-center">
+                                <h3>Generation Zero</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=3CGqaKUqfUs"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g11_4.jpg' %}" alt="">
+                            <div class="video-content content-center">
+                                <h3>Dead by Daylight</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=JGhIXLO3ul8"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{% static 'webapp/images/wallpapers/g12_4.jpg' %}" alt="">
+                            <div class="video-content content-center">
+                                <h3>Rust</h3>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=gcvDUxdmntw"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="games-review-section section pb-105 pb-lg-85 pb-md-20 pb-sm-65 pb-xs-0">
+    <div class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="section-title justify-content-center" style="margin-bottom:-20px;margin-top:20px;">
+                    <h2><span class="color-blue">Games</span>Comparisons</h2>
+                </div>
+
+            </div>
+        </div>
+        <div class="row pd-0" style="margin-top: 30px;">
+            <div class="col-md-6 mb-10 mt-50 mx-auto">
+                <iframe width="100%" height="500px" frameborder="0" scrolling="no" src="{{g1}}"></iframe>
+            </div>
+            <div class="col-md-6 mb-10 mt-50 ">
+                <iframe width="100%" height="500px" frameborder="0" scrolling="no" src="{{g2}}"></iframe>
+            </div>
+        </div> -->
+
+    </div>
+</div>
+
+<div class="newslatter-section section pb-125 pb-lg-105 pb-md-70 pb-sm-85 pb-xs-50">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="news-latter-area" style="margin-top: 80px; margin-bottom: 80px;">
+                    <div class="news-latter-box">
+                        <h3>SUBSCRIBE OUR <span class="color-blue">NEWSLETTER</span> <br> GET ALL <span
+                                class="color-red">LATEST</span> NEWS, UPDATE, <br> <span
+                                class="color-blue">VIDEOS</span> AND OFFERS </h3>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your email here">
+                        </form>
+                    </div>
+                    <div class="news-latter-banner-image">
+                        <img src="{% static 'webapp/images/news-latter/news-banner.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock body %}

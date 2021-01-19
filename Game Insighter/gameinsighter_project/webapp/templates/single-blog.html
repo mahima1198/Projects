@@ -1,0 +1,186 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+
+{%block body%}
+    <!--Page Banner Area Start-->
+    <div class="page-banner-area" style="background-image: url({% static 'webapp/images/bg/page-bg.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-content text-center">
+                        <h1>KINGS OF THE <br> WARRIORS</h1>
+                        <a class="df-btn" href="#">Buy now</a>
+                        <ul class="page-breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Blog</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Page Banner Area End-->
+    
+    <!--Blog Area Start-->
+    <div class="blog-details-area section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-xs-50" style="margin-top: 100px;">
+        <div class="container">
+            <div class="row row-25">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="blog-details">
+                                <div class="blog-img">
+                                    <a href="{%url 'webapp:single-blog' %}"><img src="{% static 'webapp/images/blog/blog-details-1.jpg' %}" alt=""></a>
+                                    <div class="meta-box">
+                                        <ul class="meta meta-border-bottom">
+                                            <li><a href="#">Smith</a></li> 
+                                            <li>15 Devember, 2018 </li>
+                                            <li><a href="#">25 Comments</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="blog-content">
+                                    <h3>latest version of angry birds released in 2019</h3>
+                                    <p><strong>Need for Sped</strong> rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally tances occur in which toil and pain can procure him some great pleasure pleasure rationally encounter sequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain itsuse it is pain, but because occasionally circumstances occur in which toil and pain can procure </p>
+                                    <p>Rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally tances occur in which toil and pain can procure him some great pleasure pleasure rationally encounte</p>
+                                    <blockquote class="blockquote mt-30 mb-30">
+                                        <p>Rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because  nally tances occur in which toil and pain can procure </p>
+                                    </blockquote>
+                                    <p>Rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or ues or desires to obtain pain of itself, because it is pain, but because occasionally tances occur in which toil and pain can procure him some great pleasure pleasure rationally encounte</p>
+                                    <div class="blog-tags">
+                                        <h5>Tags:</h5> 
+                                        <a href="#">Games</a>
+                                        <a href="#">Playstation</a>
+                                        <a href="#">Xbox</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="blog-comment-wrap col">
+                            <h4>Comments</h4>
+                            <ul class="comment-list">
+                                <li>
+                                    <div class="single-comment">
+                                        <div class="image"><img src="{% static 'webapp/images/blog/comment-1.jpg' %}" alt=""></div>
+                                        <div class="content">
+                                            <h5>sannai smith</h5>
+                                            <div class="review-date">
+                                                <span>30 Janurary, 2018</span>
+                                                <a href="#" class="reply">Reply</a>
+                                            </div>
+                                            <p>Ationally encounter consequences that are extremely painful. Nor again is there me anyone who loves or pursues or desires to obtain pain</p>
+                                        </div>
+                                    </div>
+                                    <ul class="children">
+                                        <li>
+                                            <div class="single-comment">
+                                                <div class="image"><img src="{% static 'webapp/images/blog/comment-2.jpg' %}" alt=""></div>
+                                                <div class="content">
+                                                    <h5>Alica Nicolus</h5>
+                                                    <div class="review-date">
+                                                        <span>13 December, 2018</span>     
+                                                        <a href="#" class="reply">Reply</a>
+                                                    </div>
+                                                    <p>Ationally encounter consequences that are extremely painful. Nor again is there me anyone who loves or pursues or desires to obtain pain</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="single-comment">
+                                        <div class="image"><img src="{% static 'webapp/images/blog/comment-1.jpg' %}" alt=""></div>
+                                        <div class="content">
+                                            <h5>Lisa Rose</h5>
+                                            <div class="review-date">
+                                                <span>10 December, 2018</span>
+                                                <a href="#" class="reply">Reply</a>
+                                            </div>
+                                            <p>Ationally encounter consequences that are extremely painful. Nor again is there me anyone who loves or pursues or desires to obtain pain</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4>Leave a reply</h4>
+                            <form action="#" class="comment-form">
+                                <div class="row">
+                                    <div class="col-md-6 col-12 mb-30">  
+                                        <input type="text" name="name" placeholder="Name">
+                                    </div>
+
+                                    <div class="col-md-6 col-12 mb-30">   
+                                        <input type="email" name="email" placeholder="Email">
+                                    </div>
+
+                                    <div class="col-12 mb-30">   
+                                        <textarea name="message" placeholder="Message"></textarea>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <input type="submit" value="send now">
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar-area mt-sm-60 mt-xs-50">
+                        <!--Single Sidebar Widget Start-->
+                        <div class="single-sidebar-widget mb-45">
+                            <h3>featured games</h3>
+                            <div class="single-featured-game mb-20">
+                                <div class="game-img">
+                                    <a href="#"><img src="{% static 'webapp/images/banner/banner1.jpg' %}" alt=""></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <br>
+                        <div class="single-sidebar-widget mb-45">
+                            <h3>follow us</h3>
+                            <div class="sidebar-social">
+                                <ul>
+                                    <li><a class="facebook" href="#"><i class="icofont-facebook"></i></a></li>
+                                    <li><a class="youtube" href="#"><i class="icofont-youtube-play"></i></a></li>
+                                    <li><a class="instagram" href="#"><i class="icofont-instagram"></i></a></li>
+                                    <li><a class="twitter" href="#"><i class="icofont-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Blog Area End-->
+    
+    <!--Projects section start-->
+    <div class="newslatter-section newslatter-section-tow section pt-5 pt-lg-0 pt-sm-0 pt-xs-0 pb-xs-50" style="margin-bottom: 200px;">
+        <div class="container">
+           
+            <div class="row">
+               <div class="col-12">
+                   <!--News Latter Area Start-->
+                   <div class="news-latter-area newslatter-black">
+                       <div class="news-latter-box">
+                           <h3>SUBSCRIBE OUR NEWSLETTER, GET ALL <br> LATEST NEWS, UPDATE, VIDEOS AND OFFERS </h3>
+                           <form action="#">
+                               <input type="text" placeholder="Enter your email here">
+                           </form>
+                       </div>
+                   </div>
+                   <!--News Latter Area End-->
+               </div> 
+            </div>
+            
+        </div>
+        
+    </div>
+    <!--Projects section end-->
+    
+{% endblock body %}
